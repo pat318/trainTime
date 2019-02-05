@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0066)file:///Users/patrickthompson/Desktop/pat123/trainTime/index.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Firebase PT'S Train Schedule</title>
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       
+    <link href="./Firebase PT&#39;S Train Schedule_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="./Firebase PT&#39;S Train Schedule_files/firebase.js"></script>
+    <link rel="stylesheet" href="./Firebase PT&#39;S Train Schedule_files/style.css">
+    <script type="text/javascript" src="./Firebase PT&#39;S Train Schedule_files/app.js"></script>
+    <script src="./Firebase PT&#39;S Train Schedule_files/jquery.min.js"></script>
 </head>
-
 <body>
         <div class="wrapper">
                 <!-- Header area -->
                 <div class="jumbotron jumbotron-fluid header">
                     <div class="container">
 
-                        <h1 class="text-center" class="header">Train Scheduler</h1>
+                        <h1 class="text-center">PT Express</h1>
                     </div>
                 </div>
                 <div class="container">
@@ -50,18 +47,18 @@
                             Add Train to Schedule
                         </div>
                         <div class="card-body">
-                            <form novalidate>
+                            <form novalidate="">
                               <div class="form-row">
                                 <div class="form-group col-sm-12">
-                                  <label for="trainr">Train Name</label>
-                                  <input  type="text" id="train" placeholder="SacTown Express" required/>
+                                  <label for="train-number">Train</label>
+                                  <input type="number" class="form-control" id="train" min="1" max="999" placeholder="SacTown" required="">
                                   <div class="invalid-feedback">
                                     Train name
                                   </div>
                                 </div>
                                 <div class="form-group col-sm-12">
-                                  <label for="destination">Destination</label>
-                                  <input type="text" id="destination" maxlength=20 placeholder="Sacramento" required/>
+                                  <label for="train-line">Destination</label>
+                                  <input type="text" class="form-control" id="destination" maxlength="20" placeholder="Sacramento" required="">
                                   <div class="invalid-feedback">
                                      Destination
                                   </div>
@@ -70,14 +67,13 @@
                               <div class="form-row">
                                 <div class="form-group col-sm-6">
                                   <label for="train-departure">First Train Time (24hr format)</label>
-                                  <input type="number" class="form-control" id="firstTrain" placeholder="0830" required/>
+                                  <input type="number" class="form-control" id="firstTrain" placeholder="0830" required="">
                                   <div class="invalid-feedback">
-                                    Please enter the First Train Time
                                   </div>
                                 </div>
                                 <div class="form-group col-sm-6">
                                   <label for="train-frequency">Frequency (minutes)</label>
-                                  <input type="number" class="form-control" id="train-frequency" min="10" max="720" placeholder="30" required/>
+                                  <input type="number" class="form-control" id="train-frequency" min="10" max="720" placeholder="30" required="">
                                   <div class="invalid-feedback">
                                     Please provide a Train Frequency.
                                   </div>
@@ -91,6 +87,5 @@
                 </div>
             </div>
     
-            <script src="assets/javascript/app.js"></script>
-</body>
-</html>
+
+</div></body></html>
